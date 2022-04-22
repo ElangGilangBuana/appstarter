@@ -1,0 +1,18 @@
+.jumbotron {
+  padding: 4rem 1rem;
+  /* background-color: rgb(124, 223, 236); */
+  background-image: url(../img/sapi2.JPG);
+  background-size: cover;
+}
+.sampul {
+  width: 75px;
+}
+
+.table > tbody > tr > * {
+  vertical-align: middle;
+}
+
+/* body {
+  background-image: url(../img/sapi2.JPG);
+  background-size: cover;
+} */
