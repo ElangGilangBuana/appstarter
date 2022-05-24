@@ -15,12 +15,36 @@ class Sapi extends BaseController
     {
         
         $this->sapiModel = new SapiModel();
+  
+
        
     }
     
     public function index()
     {
+        
+                $data = [
+        
+                    'title' => 'Daftar sapi',
+                    'sapi' => $this->sapiModel->get_sapi()->getResult(),
+                 
+                   
+                ];
+        
+                // dd($data['sapi']);
+        
+                return view('sapi/index', $data);   
 
+
+
+            // $data = [
+            //     'title' => 'Daftar Sapi',
+            //     // 'orang' => $this->orangModel->findAll()
+            //     'sapi' =>$this->sapiModel->paginate(1),
+            //     'pager' => $this->sapiModel->pager
+            // ];
+            // return view('sapi/index', $data);
+        
         //    $keyword = $this->request->getVar('keyword');
 
         //    if($keyword){
@@ -30,17 +54,6 @@ class Sapi extends BaseController
         //        $sapi = $this->sapiModel;
         //    }
 
-
-        $data = [
-
-            'title' => 'Daftar sapi',
-            'sapi' => $this->sapiModel->get_sapi()->getResult()
-           
-        ];
-
-        // dd($data['sapi']);
-
-        return view('sapi/index', $data);   
     }
 
     public function detail ($eartag)
@@ -69,17 +82,18 @@ class Sapi extends BaseController
 
     }
 
-    // public function pagination()
-    // {
-    //     $$data = [
-    //         'title' => 'Daftar sapi',
-    //         'sapi' => $this->sapiModel->paginate(1),
-    //         'pager' => $this->sapiModel->pager
-    //     ];
+    
+    public function pagination()
+    {
+        $data = [
+            'title' => 'Daftar sapi',
+            'sapi' => $this->sapiModel->paginate(1),
+            'pager' => $this->sapiModel->pager
+        ];
 
-    //     // dd($data['sapi']);
+        // dd($data['sapi']);
       
-    //     return view('sapi/index', $data);
+        return view('sapi/index', $data);
 
-    // }
+    }
   }

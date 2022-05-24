@@ -9,6 +9,7 @@ class SapiModel extends Model
 {
     protected $table = 'sapi';
     protected $useTimestamps = true;  
+    
     // $db = \Config\Database::connect();
 
 
@@ -53,6 +54,8 @@ class SapiModel extends Model
         return $query;
     }
 
+   
+    
 
     // public function search($keyword)
     // {

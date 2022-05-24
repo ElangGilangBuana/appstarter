@@ -36,6 +36,8 @@ $routes->get('/detail/(:any)', 'sapi::detail/$1');
 $routes->get('/kesehatan/(:any)', 'sapi::kesehatan/$1');
 
 
+
+
 $routes->get('/komik/create', 'Komik::create');
 $routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
 $routes->delete('/komik/(:num)', 'Komik::delete/$1');

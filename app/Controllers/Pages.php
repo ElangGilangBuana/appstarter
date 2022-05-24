@@ -7,7 +7,7 @@ class Pages extends BaseController
     public function index()
     {
 
-      
+       
         return view('sapi/index');
         
         
