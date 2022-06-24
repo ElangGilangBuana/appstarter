@@ -17,11 +17,13 @@ class SapiModel extends Model
         $query = $this->db->table('sapi')
         ->join('pemeriksaan', 'pemeriksaan.eartag=sapi.eartag')
         ->join('hospital_pen', 'hospital_pen.id_hospital_pen=pemeriksaan.id_hospital_pen')
+        ->join('pakan', 'pakan.id_pakan=pemeriksaan.id_pakan')
         ->join('pegawai', 'pegawai.id_pegawai=pemeriksaan.id_pegawai')
         ->join('penyakit', 'penyakit.id_penyakit=pemeriksaan.id_penyakit')
         ->join('obat', 'obat.id_obat=pemeriksaan.id_obat')
         ->join('penentuan_kandang', 'penentuan_kandang.eartag=sapi.eartag')
         ->join('kandang_pen', 'kandang_pen.id_kandang_pen=penentuan_kandang.id_kandang_pen')
+        
         ->get();
         return $query;
     }       
@@ -30,6 +32,7 @@ class SapiModel extends Model
         $query = $this->db->table('sapi')
         ->join('pemeriksaan', 'pemeriksaan.eartag=sapi.eartag')
         ->join('hospital_pen', 'hospital_pen.id_hospital_pen=pemeriksaan.id_hospital_pen')
+        ->join('pakan', 'pakan.id_pakan=pemeriksaan.id_pakan')
         ->join('pegawai', 'pegawai.id_pegawai=pemeriksaan.id_pegawai')
         ->join('penyakit', 'penyakit.id_penyakit=pemeriksaan.id_penyakit')
         ->join('obat', 'obat.id_obat=pemeriksaan.id_obat')
@@ -53,6 +56,9 @@ class SapiModel extends Model
         ->get();
         return $query;
     }
+
+   
+
 
    
     

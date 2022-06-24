@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\SapiModel;
+use \Hermawan\DataTables\DataTable;
 
 use CodeIgniter\Database\Config;
 
@@ -33,28 +34,33 @@ class Sapi extends BaseController
         
                 // dd($data['sapi']);
         
-                return view('sapi/index', $data);   
-
-
-
-            // $data = [
-            //     'title' => 'Daftar Sapi',
-            //     // 'orang' => $this->orangModel->findAll()
-            //     'sapi' =>$this->sapiModel->paginate(1),
-            //     'pager' => $this->sapiModel->pager
-            // ];
-            // return view('sapi/index', $data);
-        
-        //    $keyword = $this->request->getVar('keyword');
-
-        //    if($keyword){
-
-        //        $sapi = $this->sapiModel->search($keyword);
-        //    } else {
-        //        $sapi = $this->sapiModel;
-        //    }
-
+                return view('sapi/indexnew', $data);   
     }
+
+    // public function listData(){
+    //     $sapi = $this->sapiModel;
+    //     $data = [];
+    //     $i = 1;
+
+    //     foreach ($sapi as $datas) {
+    //         $data['sapi'][] = [
+    //             $i++,
+    //             $datas['eartag'],
+    //             $datas['id_hospital_pen'],
+    //             $datas['penyakit'],
+    //         ];
+    //     } return json_encode($data);
+
+
+        // if($this->request->isAJAX()){
+        //     $db = \Config\Database::connect();
+        //     $builder = $db->table('sapi')->select('eartag, id_hospital_pen, penyakit');
+            
+        //     return DataTable::of($builder)
+        //     ->addNumbering('No')
+        //     ->toJson(true);
+        // }  
+    // }
 
     public function detail ($eartag)
     {
@@ -81,19 +87,19 @@ class Sapi extends BaseController
         return view('sapi/kesehatan', $data);
 
     }
+}
 
     
-    public function pagination()
-    {
-        $data = [
-            'title' => 'Daftar sapi',
-            'sapi' => $this->sapiModel->paginate(1),
-            'pager' => $this->sapiModel->pager
-        ];
+//     public function pagination()
+//     {
+//         $data = [
+//             'title' => 'Daftar sapi',
+//             'sapi' => $this->sapiModel->paginate(1),
+//             'pager' => $this->sapiModel->pager
+//         ];
 
-        // dd($data['sapi']);
+//         // dd($data['sapi']);
       
-        return view('sapi/index', $data);
+//         return view('sapi/index', $data);
 
-    }
-  }
+//     }

@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'sapi::index');
 $routes->get('/detail/(:any)', 'sapi::detail/$1');
 $routes->get('/kesehatan/(:any)', 'sapi::kesehatan/$1');
+$routes->get('/sapi/listData',  'sapi::listData');
 
 
 

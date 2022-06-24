@@ -71,21 +71,17 @@
   <table class="table">
   <thead>
     <tr>
-      <th scope="col">Nomor Asal Kandang</th>
-      <th scope="col">Kedatangan</th>
-      <th scope="col">Hospital Pen</th>
-      <th scope="col">jenis Hospital Pen</th>
-      <th scope="col">Kapasitas Hospital Pen</th>
+      <th scope="col">ID Pakan</th>
+      <th scope="col">Nama Pakan</th>
+      <th scope="col">Jenis Pakan</th>
     </tr>
   </thead>
   <tbody>
 
     <tr>
-      <th scope="row"><?= $sapi[0]->id_kandang_pen ?></th>
-      <td><?= $sapi[0]->kedatangan ?></td>
-      <td><?= $sapi[0]->id_hospital_pen ?></td>
-      <td><?= $sapi[0]->jenis_hospital_pen?></td>
-      <td><?= $sapi[0]->kapasitas_hospital_pen?></td>
+      <th scope="row"><?= $sapi[0]->id_pakan ?></th>
+      <td><?= $sapi[0]->nama_pakan ?></td>
+      <td><?= $sapi[0]->jenis_pakan ?></td>
     </tr>
    
   </tbody>

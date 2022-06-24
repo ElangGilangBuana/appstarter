@@ -25,7 +25,7 @@
         
         
           
-          <table class="table table-sm table-bordered" >
+          <table class="table table-sm table-bordered" id="datasapi">
 
      <!-- Table -->
     </thead>
@@ -52,9 +52,10 @@
       </td>
     </tr>
     <?php endforeach;  ?>
+    
   </tbody>
 </table>
- 
+  </script>
         </div>
     </div>
 </div>
